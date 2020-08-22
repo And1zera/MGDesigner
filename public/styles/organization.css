@@ -1,6 +1,5 @@
 #page-organization{
-    height: 1300px;
-
+    padding-bottom: 30px;
     background-color: blueviolet;
 }
 
@@ -62,6 +61,7 @@
 
     max-width: 840;
 }
+
 
 #tecnologia{
     margin: 30px;
