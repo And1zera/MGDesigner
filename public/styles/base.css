@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    font-family: Poppins;
+}
+
+/* NavBar */
+
+#navbarNav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link{
+    width: 100%;
+
+    text-align: center;
+
+    color: white !important;
+    
+    font-weight: bold;
+
+    transition: 0.2s;
+
+    border: 1px solid white;
+
+    border-radius: 7px;
+
+    margin-top: 5px;
+}
+
+.navbar{
+    background-color: blueviolet;
+}
+
+.nav-link:hover{
+    background-color: white;
+
+    color: black !important;
+}
+
+/* Footer */
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
