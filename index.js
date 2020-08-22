@@ -34,4 +34,4 @@ server
     res.render('contact.html');
 })
 
-.listen('5200');
+.listen(process.env.PORT || '5200');
