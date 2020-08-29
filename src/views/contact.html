@@ -1,17 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <div style="display: flex; align-items: center; justify-content: center;"> 
-        <img src="/img/warning.gif" alt="em construção" width="220" height="300">
+<div id="page-contact">
+    <div id="title-contact">
+        Entre em contato conosco !
+        <p>Assim poderemos conversar melhor e juntarmos nossas ideias</p>
     </div>
-    
-    <p style="display: flex; align-items: center; justify-content: center; font-weight: bold; text-align: center;">
-        Essa pagina ainda esta em construção pelos nossos desenvolvedores
-    </p>
-
-    <div style="display: flex; align-items: center; justify-content: center;"> 
-        <img src="/img/PRETO.png" alt="logo softand" width="80" height="80">
+    <form action="/contact/sendEmail" id="contact-form" method="POST">
+        <div class="input-block">
+            <label for="name">Nome completo</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="input-block">
+            <label for="name">Email</label>
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+        <div class="input-block">
+            <label for="whatsapp">Whatsapp <small>(Somente numeros)</small></label>
+            <input type="number" name="whatsapp" id="whatsapp" pattern="[0-9]" required>
+        </div>
+        <div class="textarea-block">
+            <label for="bio">Mensagem</label>
+            <textarea name="message" id="message" required></textarea>
+        </div>
+        <button type="submit" id="button-submit">Enviar Mensagem</button>
+    </form>
+    <div id="subtitle-contact">
+        Ou você pode escolher esses canais de comunicação
+    </div>
+    <div id="comunications">
+        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5519983113579&text=Olá gostaria de conversar mais sobre projetos e ideias" target="_blank">
+            <img src="/img/whatsapp.png" alt="whatsapp">
+        </a>
+        <a href="https://www.instagram.com/microsoft/" target="_blank">
+            <img src="/img/instagram-sketched.png" alt="instagram">
+        </a>
     </div>
 </div>
 {% endblock %}

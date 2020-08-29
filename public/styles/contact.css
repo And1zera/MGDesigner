@@ -1,0 +1,145 @@
+#page-contact{
+    padding-bottom: 30px;
+    background-color: blueviolet;
+}
+
+#contact-form{
+    background-color: white;
+
+    margin: 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    padding: 20px;
+
+    max-width: 600px;
+}
+
+#title-contact{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+#title-contact p{
+    font-size: 15px;
+
+    text-align: center;
+}
+
+.input-block,
+.textarea-block {
+    margin-bottom: 20px;
+}
+
+.input-block label,
+.textarea-block label {
+    font-weight: bold;
+}
+
+.input-block input,
+.textarea-block textarea{
+    width: 100%;
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border: 1px solid black;
+    outline: 0;
+    padding: 15px;
+}
+
+/* remove arrow button in input-number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ /* end */
+
+.input-block input{
+    height: 40px;
+}
+
+.textarea-block textarea{
+    height: 120px;
+}
+
+.input-block,
+.textarea-block{
+    position: relative;
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{
+    content: "";
+
+    width: calc(100% - 3.2rem);
+    height: 2px;
+    background: blue;
+
+    position: absolute;
+    left: 1.6rem;
+    
+    bottom: 0px;
+} 
+
+#button-submit{
+    width: 100%;
+    height: 60px;
+
+    color: white;
+
+    background-color: green;
+
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+
+    transition: 0.2s;
+}
+#button-submit:hover{
+    background-color:#006400;
+}
+
+#subtitle-contact{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+#comunications{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#comunications a{
+    margin: 20px;
+}
+
+#comunications a img{
+    margin: 20px;
+
+    width: 100px;
+    height: 100px;
+
+    transition: 0.3s;
+}
+
+#comunications a img:hover{
+    transform: scale(1.1);
+}

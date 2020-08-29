@@ -1,12 +1,12 @@
 const express = require('express');
 const server = express();
 const nunjucks = require('nunjucks');
+const { sendEmail } = require('./src/services/emailService')
 
 nunjucks.configure('src/views', {
     express: server,
     noCache:true
 });
-
 
 server
 
@@ -33,5 +33,11 @@ server
 .get('/contact', (req, res) => {
     res.render('contact.html');
 })
+
+.get('/success-contact', (req, res) => {
+    res.render('success-contact.html');
+})
+
+.post('/contact/sendEmail', sendEmail)
 
 .listen(process.env.PORT || '5200');

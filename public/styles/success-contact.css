@@ -1,0 +1,38 @@
+#page-success-contact{
+    height: 87vh;
+    background-color: blueviolet;
+
+    background-image: url("/img/success-background.svg");
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#success-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#success-icons img{
+    width: 130px;
+    height: 130px;
+}
+
+#page-success-contact p{
+    text-align: center;
+
+    color: white;
+    font-weight: bold;
+
+    font-size: 20px;
+    
+    align-self: center;
+
+}
+
+
+
+
