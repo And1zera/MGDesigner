@@ -3,8 +3,7 @@ require('dotenv/config');
 
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
-
-debugger;
+const emailTo = process.env.EMAIL_TO;
 
 async function sendEmail(req, res) {
     const trasporter = nodemailer.createTransport({
@@ -15,11 +14,10 @@ async function sendEmail(req, res) {
             pass
         }
     });
-
     try {
         trasporter.sendMail({
             from: user,
-            to: "help1.anderson@hotmail.com",
+            to: emailTo,
             replyTo: req.body.email,
             subject: "Você possui uma nova mensagem",
             text: "----------Nova mensagem----------"
