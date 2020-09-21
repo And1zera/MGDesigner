@@ -1,7 +1,8 @@
 const express = require('express');
 const server = express();
 const nunjucks = require('nunjucks');
-const { sendEmail } = require('./src/services/emailService')
+const { sendEmail } = require('./src/services/emailService');
+const { renderProjects } = require('./src/services/renderPages');
 
 nunjucks.configure('src/views', {
     express: server,
@@ -26,9 +27,7 @@ server
     res.render('organization.html');
 })
 
-.get('/projects', (req, res) => {
-    res.render('projects.html');
-})
+.get('/projects', renderProjects )
 
 .get('/contact', (req, res) => {
     res.render('contact.html');

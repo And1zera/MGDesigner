@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="page-project-base">
+  <div id="title-project">
+    {{ projects[id].nome }}
+  </div>
+  <div class="subtitle-project">
+    Sobre
+  </div>
+  <div class="text-project">
+    <p>{{ projects[id].context }}</p>
+  </div>
+  <div class="subtitle-project">
+    Principais cores
+  </div>
+  <div class="container">
+    <div class="row" id="colorRow">
+      <div class="col-sm" id="colorPrimary">
+        {{ projects[id].primaryColor }}</div>
+      <div class="col-sm" id="colorSecondary">
+        {{ projects[id].secondaryColor }} </div>
+      <div background-color=""></div>
+    </div>
+  </div>
+  <div class="subtitle-project">
+    Protótipo
+  </div>
+  <div id="img-prototipo">
+    <img src="{{ projects[0].Images[0] }}" alt="imagem Protótipo">
+  </div>
+  <div class="text-project">
+    <p>{{ projects[id].prototypeText }}</p>
+  </div>
+  <div class="subtitle-project">
+    Produto Final
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img src="{{ projects[id].Images[1] }}" alt="imagem produto Final 1" id="myImg1">
+      </div>
+      <div class="col-sm">
+        <img src="{{ projects[id].Images[2] }}" alt="imagem produto Final 2" id="myImg2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <img src="{{ projects[id].Images[3] }}" alt="imagem produto Final 3" id="myImg3">
+      </div>
+      <div class="col-sm">
+        <img src="{{ projects[id].Images[4] }}" alt="imagem produto Final 4" id="myImg4">
+      </div>
+    </div>
+  </div>
+  <div class="subtitle-project">
+    Consideraçãoes Finais
+  </div>
+  <div class="text-project">
+    <p>{{ projects[id].completionText }}</p>
+  </div>
+</div>
+<!-- <div class="modal" tabindex="-1" id="exampleModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+             <img src="/img/img1.jpg" alt="imagem produto Final 1"> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<div id="myModal" class="modalAnd">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+</div>
+<script>
+  var colorPrimary = document.getElementById('colorPrimary');
+  colorPrimary.style.backgroundColor = '{{ projects[id].primaryColor }}';
+
+  var colorSecondary = document.getElementById('colorSecondary');
+  colorSecondary.style.backgroundColor = '{{ projects[id].secondaryColor }}';
+</script>
+{% endblock %}

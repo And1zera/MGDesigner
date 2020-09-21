@@ -1,0 +1,77 @@
+#page-projects{
+    height: 88vh;
+    padding-bottom: 30px;
+    background-color: blueviolet;
+}
+
+#title-projects{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.col-lg{
+    height: 170px;
+    /* border: 1px solid white;  */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-lg a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.project-link{
+    height: 140px;
+
+    text-align: center;
+    
+    background-color: black;
+
+    color: white !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    font-weight: bold;
+}
+
+#project0{
+    background-image: url('/img/img1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+#project1{
+    background-image: url('/img/img2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+#project2{
+    background-image: url('/img/img3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+#project3{
+    background-image: url('/img/img10.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+@media only screen and (max-width: 893px){
+    #page-projects{
+        height: 850px;
+    }
+}

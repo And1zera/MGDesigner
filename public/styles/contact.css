@@ -45,7 +45,6 @@
 .textarea-block textarea{
     width: 100%;
     border-radius: 0.8rem;
-    background: var(--color-input-background);
     border: 1px solid black;
     outline: 0;
     padding: 15px;
